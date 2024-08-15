@@ -1,4 +1,4 @@
-package com.example.fair.express;
+package com.gc.express;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.gc.express.OrderAdapter;
 
 import java.util.ArrayList;
 

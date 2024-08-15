@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
     android:orientation="vertical"
-    tools:context="com.example.fair.express.User">
+    tools:context="com.gc.fair.express.User">
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
@@ -25,75 +25,85 @@
             android:gravity="center_horizontal"
             android:text="个人中心"
             android:textColor="#000000"
-            android:textSize="25dp"/>
+            android:textSize="25dp" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:orientation="horizontal">
-    </LinearLayout>
+        android:orientation="horizontal"></LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="wrap_content" />
+
         <RelativeLayout
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-        <ImageView
-            android:id="@+id/userimage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/user"/>
-        <TextView
-            android:layout_below="@id/userimage"
-            android:id="@+id/username"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="用户名"/>
+
+            <ImageView
+                android:id="@+id/userimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/user" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userimage"
+                android:text="用户名"
+                android:textSize="20dp" />
         </RelativeLayout>
 
     </LinearLayout>
+
     <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-    <ImageButton
-        android:id="@+id/minebutton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/mine2"
-        android:layout_weight="1"/>
-    <ImageButton
-        android:src="@drawable/minemessage"
-        android:id="@+id/mymessagebutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"/>
-</LinearLayout>
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/minebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/mine2" />
+
+        <ImageButton
+            android:id="@+id/mymessagebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/minemessage" />
+    </LinearLayout>
+
     <LinearLayout
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <ImageButton
-            android:src="@drawable/credit"
             android:id="@+id/creditbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.75"/>
+            android:layout_weight="0.75"
+            android:src="@drawable/credit" />
+
         <ImageButton
-            android:src="@drawable/complain"
             android:id="@+id/complainbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:src="@drawable/complain" />
     </LinearLayout>
 
 

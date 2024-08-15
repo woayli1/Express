@@ -1,4 +1,4 @@
-package com.example.fair.express;
+package com.gc.express;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

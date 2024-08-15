@@ -1,4 +1,4 @@
-package com.example.fair.express;
+package com.gc.express;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.gc.express.Messagelist;
 
 import java.util.ArrayList;
 

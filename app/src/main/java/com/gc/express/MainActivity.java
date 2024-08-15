@@ -1,4 +1,4 @@
-package com.example.fair.express;
+package com.gc.express;
 
 import android.app.Activity;
 import android.content.Context;
@@ -36,23 +36,20 @@ public class MainActivity extends Activity {
     //按钮被点击后触发的事件
     public void Btnclick(View view) {
         int id = view.getId();
-        switch (id) {
-            case R.id.loginBtn:
-                name = nametext.getText().toString();
-                String psd = psdtext.getText().toString();
-                Cursor cursor = db.rawQuery("select * from us where user_name='" + name + "'and pwd='" + psd + "'", null);
-                if (cursor.getCount() == 0) {
-                    Toast.makeText(this, "输入有误", Toast.LENGTH_SHORT).show();
-                    return;
-                } else {
-                    Toast.makeText(this, "登录成功", Toast.LENGTH_SHORT).show();
-                    intent = new Intent(this, MainActivity2.class);
-                    intent.putExtra("aa", name);
-                }
-                break;
-            case R.id.button2:
-                intent = new Intent(this, MainActivity3.class);
-                break;
+        if (id == R.id.loginBtn) {
+            name = nametext.getText().toString();
+            String psd = psdtext.getText().toString();
+            Cursor cursor = db.rawQuery("select * from us where user_name='" + name + "'and pwd='" + psd + "'", null);
+            if (cursor.getCount() == 0) {
+                Toast.makeText(this, "输入有误", Toast.LENGTH_SHORT).show();
+                return;
+            } else {
+                Toast.makeText(this, "登录成功", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, MainActivity2.class);
+                intent.putExtra("aa", name);
+            }
+        } else if (id == R.id.button2) {
+            intent = new Intent(this, MainActivity3.class);
         }
         db.close();
         startActivity(intent);

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.fair.express">
+    package="com.gc.express">
 
     <application
         android:allowBackup="true"
@@ -9,29 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+        <activity
+            android:name="com.gc.express.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity2">
-        </activity>
-               <activity android:name=".MainActivity3">
-        </activity>
-        <activity android:name=".User">
-        </activity>
-        <activity android:name=".ReceiveActivity">
-        </activity>
-        <activity android:name=".Messagelist">
-        </activity>
-        <activity android:name=".SendActivity">
-        </activity>
+
+        <activity android:name=".MainActivity2" />
+        <activity android:name=".MainActivity3" />
+        <activity android:name=".User" />
+        <activity android:name=".ReceiveActivity" />
+        <activity android:name=".Messagelist" />
+        <activity android:name=".SendActivity" />
         <activity
             android:name=".ReceiveOrder"
-            android:label="@string/title_activity_receive_order">
-        </activity>
+            android:label="@string/title_activity_receive_order" />
+
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.example.fair.express;
+package com.gc.express;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,6 +10,9 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.gc.express.MainActivity2;
+import com.gc.express.MoneyAdapter;
 
 public class SendActivity extends Activity {
     public EditText nametext;
@@ -58,22 +61,21 @@ public class SendActivity extends Activity {
     public void Buttononclick(View view) {
         int id = view.getId();
 
-        switch (id) {
-            case R.id.issue:
-                String name = nametext.getText().toString();
-                String phone = phonetext.getText().toString();
-                String comp = company.getText().toString();
-                String idt = idtext.getText().toString();
-                String ad = address.getText().toString();
-                String ti = time.getText().toString();
-                String mo = (String) spinner.getSelectedItem();
+        if (id == R.id.issue) {
+            String name = nametext.getText().toString();
+            String phone = phonetext.getText().toString();
+            String comp = company.getText().toString();
+            String idt = idtext.getText().toString();
+            String ad = address.getText().toString();
+            String ti = time.getText().toString();
+            String mo = (String) spinner.getSelectedItem();
 
-                db.execSQL("insert into ord values('" + ord_name + "','" + comp + "','" + ad + "','" + mo + "','" + ti + "','" + name + "','" + null + "','" + idt + "','" + phone + "','" + 1 + "');");
-                Toast.makeText(this, "发布成功", Toast.LENGTH_SHORT).show();
-                intent = new Intent(this, MainActivity2.class);
-                intent.putExtra("aa", ord_name);
-                db.close();
-                startActivity(intent);
+            db.execSQL("insert into ord values('" + ord_name + "','" + comp + "','" + ad + "','" + mo + "','" + ti + "','" + name + "','" + null + "','" + idt + "','" + phone + "','" + 1 + "');");
+            Toast.makeText(this, "发布成功", Toast.LENGTH_SHORT).show();
+            intent = new Intent(this, MainActivity2.class);
+            intent.putExtra("aa", ord_name);
+            db.close();
+            startActivity(intent);
         }
     }
 }

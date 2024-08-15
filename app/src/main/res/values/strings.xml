@@ -1,11 +1,13 @@
 <resources>
+
     <string name="app_name">Express</string>
+
     <string-array name="money">
         <item>1元</item>
         <item>5元</item>
         <item>10元</item>
-
-
     </string-array>
+
     <string name="title_activity_receive_order">ReceiveOrder</string>
+
 </resources>
